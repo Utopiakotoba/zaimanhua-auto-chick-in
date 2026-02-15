@@ -5,6 +5,15 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [1.8.0] - 2026-02-15
+
+### Added
+
+- 签到后自动领取"VIP福利"每日积分 (`src/checkin.py`)
+  - 新增 `claim_vip_reward()` 函数，通过任务列表 API 检查并领取 VIP福利 (任务 ID=16，奖励 2 积分)
+  - 非 VIP 账号自动跳过，不影响签到流程
+  - 签到主流程执行顺序：签到 → 领取签到积分 → 领取VIP福利
+
 ## [1.7.0] - 2026-02-15
 
 ### Added
